@@ -15,10 +15,11 @@ let sTwo = process.argv[3]
 
 
 const longest = (sOne, sTwo) => {
-    sOne.split(" ")
+    let arrOne = sOne.split("")
+    let arrTwo = sTwo.split("")
+    let combinedArr = [...arrOne, ...arrTwo].sort()
+
+    return combinedArr.filter((item, index) => combinedArr.indexOf(item) === index).join("")    
 }
 
-console.log(`split example:`, sOne.split("").sort().map(element => {
-sfaf
-}))
-
+console.log(`Final Function: `, longest(sOne, sTwo))
