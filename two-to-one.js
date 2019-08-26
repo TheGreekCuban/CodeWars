@@ -19,6 +19,6 @@ const longest = (sOne, sTwo) => {
 }
 
 console.log(`split example:`, sOne.split("").sort().map(element => {
-
+sfaf
 }))
 
