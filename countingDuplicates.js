@@ -22,12 +22,14 @@ console.log(duplicateCount(text))
 /*
 
 function duplicateCount(text){
-    Here we start off the same way, creating an all lowercase string and then splitting each letter into an array. Then we run filter on that array. With filter we only add the element into the filtered array if 
+    Here we start off the same way, creating an all lowercase string and then splitting each letter into an array. Then we run filter on that array. With filter we only add the element into the filtered array if there are duplicates. The way this works is as follows:
+        a. the indexOf(val) will always return the index of the first element that matches value, so if i !== to the index of the first match, that must mean there are duplicates.
+        b. the other side of the && says that in addition to condition a, the final index of the final occurence of val, must be equal to i, which is always the case.
     return text.toLowerCase().split('').filter(function(val, i, arr){
       return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
     }).length;
   }
-*/
+
 
 let array = [8, 1, 2, 4, 7, 9, 5, 5, 7, 10, 4, 6, 7, 2, 3, 6, 4, 5, 10]
 
@@ -38,4 +40,4 @@ console.log(`Array Filtered: ${array.filter(function(val, i, arr){
     return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
   })}`)
 
-
+*/
